@@ -85,4 +85,4 @@ class DBStorage:
 
     def close(self):
         """disposes all sessions in registry"""
-        self.__session.remove()
+        self.__session.close()
