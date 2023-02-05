@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/python3
-""" State Module for HBNB project """
-from models.base_model import BaseModel
-
-
-class Amenity(BaseModel):
-    name = ""
-=======
 #!/usr/bin/python3
 """ State Module for HBNB project """
 from models.base_model import BaseModel, Base
@@ -22,4 +13,3 @@ class Amenity(BaseModel, Base):
         name = Column(String(128), nullable=False)
     else:
         name = ''
->>>>>>> c2fd32adcec740605a2ebf6f6a2687b51aede372

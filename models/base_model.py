@@ -17,7 +17,6 @@ class BaseModel:
         created_at (sqlalchemy string): Time model was created
         updated_at (sqlalchmey string): Time model was last updated
     """
-
     id = Column(String(60),
                 primary_key=True,
                 unique=True,
@@ -29,6 +28,10 @@ class BaseModel:
     updated_at = Column(DateTime,
                         nullable=False,
                         default=datetime.utcnow())
+    """else:
+        id = ''
+        created_at = ''
+        updated_at = ''"""
 
     def __init__(self, *args, **kwargs):
         """Instatntiates a new model"""
