@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Fetches data from storage engine and displays in li tag
 Listens on 0.0.0.0:5000
-
+Routes:
+    /cities_by_states: Html page with a list of all states
 """
 from models import storage, storage_type
 from models.state import State
@@ -13,7 +14,7 @@ app = Flask(__name__)
 @app.route("/cities_by_states", strict_slashes=False)
 def cities_by_states():
     """Displays html page of cities by states in a list format"""
-    states = storage.all(State)
+    states = storage.all("State")
     return render_template("8-cities_by_states.html", states=states)
 
 
