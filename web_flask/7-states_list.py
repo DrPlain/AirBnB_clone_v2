@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Fetches data from storage engine and displays in li tag
-Listens on 0.0.0.0:5000
-
+"""Fetches data from storage engine
 """
 from models import storage
 from models.state import State
